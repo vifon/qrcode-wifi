@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QR Code Generator for Wifi Credentials</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="border">
+      <div class="border">
+        Security
+        <div class="autorefresh">
+          <label>
+            <input type="radio" name="security" value="WEP">WEP
+          </label>
+          <label>
+            <input type="radio" name="security" value="WPA">WPA
+          </label>
+          <label>
+            <input type="radio" name="security" value="WPA2" checked>WPA2
+          </label>
+        </div>
+      </div>
+      <div class="border">
+        <label>
+          SSID
+          <input type="text" id="ssid" class="autorefresh">
+        </label>
+        <label>
+          Password
+          <input type="password" id="pass" class="autorefresh">
+        </label>
+      </div>
+    </div>
+    <details id="output">
+      <summary class="border">
+        Click to show the raw textual data (contains the password).
+        <div id="img_output"></div>
+      </summary>
+      <div class="border" id="text_output"></div>
+    </details>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
