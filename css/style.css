@@ -7,13 +7,11 @@ body {
   margin: 0.5em;
   padding: 0.5em; }
 
-#output {
-  display: flex;
-  flex-direction: column;
-  width: 20em; }
-
-#output * {
+#img_output {
   text-align: center; }
+
+#text_output {
+  white-space: nowrap; }
 
 summary {
   outline: none; }
