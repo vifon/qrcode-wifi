@@ -17,6 +17,9 @@ body {
 #output * {
   text-align: center;
 }
+#text_output {
+  white-space: nowrap;
+}
 
 summary {
   outline: none;
