@@ -11,7 +11,7 @@ function generateQRCode() {
 
   const qrtext = "WIFI:S:" + escapedSsid + ";T:" + security + ";P:" + escapedPass + ";;";
   let qrsize = 4;
-  while (true) {
+  while (qrsize < 20) {
     try {
       const qr = qrcode(qrsize, 'M');
       qr.addData(qrtext);
