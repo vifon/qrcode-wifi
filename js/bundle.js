@@ -97,20 +97,23 @@ function generateQRCode() {
     const escapedSsid = escape(ssid);
     const escapedPass = escape(pass);
     const qrtext = "WIFI:S:" + escapedSsid + ";T:" + security + ";P:" + escapedPass + ";;";
-    let qrsize = 4;
-    while (qrsize < 20) {
-        try {
-            const qr = qrcode(qrsize, 'M');
-            qr.addData(qrtext);
-            qr.make();
-            document.getElementById('text_output').textContent = qrtext;
-            document.getElementById('img_output').innerHTML = qr.createImgTag(6);
-            return;
-        }
-        catch (err) {
-            qrsize += 1;
+    function growQRCodeUntilDataFits(data) {
+        let qrsize = 4;
+        while (qrsize < 20) {
+            try {
+                const qr = qrcode(qrsize, 'M');
+                qr.addData(data);
+                qr.make();
+                document.getElementById('text_output').textContent = data;
+                document.getElementById('img_output').innerHTML = qr.createImgTag(6);
+                return;
+            }
+            catch (err) {
+                qrsize += 1;
+            }
         }
     }
+    growQRCodeUntilDataFits(qrtext);
 }
 document.querySelectorAll('input.autorefresh').forEach((x) => x.addEventListener('input', generateQRCode));
 document.querySelectorAll('input[type="radio"]').forEach((s) => s.onclick = generateQRCode);

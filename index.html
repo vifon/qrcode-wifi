@@ -8,8 +8,8 @@
   </head>
 
   <body>
-    <div class="border">
-      <div class="border">
+    <div class="input-form">
+      <div class="security-form">
         Security
         <div class="autorefresh">
           <label>
@@ -23,13 +23,13 @@
           </label>
         </div>
       </div>
-      <div class="border">
+      <div class="credentials-form">
         <label>
           SSID
           <input type="text" id="ssid" class="autorefresh">
         </label>
         <div>
-          <label class="inline-block">
+          <label style="display: inline-block;">
             Password
             <input type="password" id="pass" class="autorefresh">
           </label>
@@ -38,11 +38,11 @@
       </div>
     </div>
     <details id="output">
-      <summary class="border">
+      <summary class="output-form">
         Click to show the raw textual data (contains the password).
         <div id="img_output"></div>
       </summary>
-      <div class="border" id="text_output"></div>
+      <div class="output-form" id="text_output"></div>
     </details>
     <script src="js/bundle.js"></script>
   </body>

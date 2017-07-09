@@ -1,10 +1,10 @@
 body {
   padding: 0.5em; }
 
-.inline-block {
-  display: inline-block; }
-
-.border {
+.input-form,
+.security-form,
+.credentials-form,
+.output-form {
   display: inline-block;
   border: 1px solid grey;
   margin: 0.5em;
