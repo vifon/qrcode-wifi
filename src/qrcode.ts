@@ -26,10 +26,10 @@ function generateQRCode() {
 }
 
 document.querySelectorAll('input.autorefresh').forEach(
-  (s: HTMLInputElement) => s.oninput = generateQRCode
-)
+  (x: HTMLInputElement) => x.addEventListener('input', generateQRCode)
+);
 document.querySelectorAll('input[type="radio"]').forEach(
   (s: HTMLInputElement) => s.onclick = generateQRCode
-)
+);
 
 generateQRCode();
