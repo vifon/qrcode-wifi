@@ -31,5 +31,15 @@ document.querySelectorAll('input.autorefresh').forEach(
 document.querySelectorAll('input[type="radio"]').forEach(
   (s: HTMLInputElement) => s.onclick = generateQRCode
 );
+document.getElementById('revealpass').addEventListener(
+  'click', function () {
+    const pass = document.getElementById('pass');
+    if (pass.getAttribute('type') == 'password') {
+      pass.setAttribute('type', 'text');
+    } else {
+      pass.setAttribute('type', 'password');
+    }
+  }
+);
 
 generateQRCode();
