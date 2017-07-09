@@ -1,6 +1,9 @@
 body {
   padding: 0.5em; }
 
+.inline-block {
+  display: inline-block; }
+
 .border {
   display: inline-block;
   border: 1px solid grey;
