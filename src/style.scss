@@ -1,28 +1,32 @@
-body {
-  padding: 0.5em;
+$roboto-font-path: "../node_modules/materialize-sass/fonts/roboto/";
+@import "../node_modules/materialize-sass/sass/materialize";
+
+// https://stackoverflow.com/a/6202729/1561140
+details summary::-webkit-details-marker {
+  display:none;
 }
 
-.input-form,
-.security-form,
-.credentials-form,
-.output-form {
-  display: inline-block;
-  border: 1px solid grey;
-  margin: 0.5em;
-  padding: 0.5em;
-}
-
-#img_output {
-  text-align: center;
-}
-#text_output {
-  white-space: nowrap;
-}
-
-summary {
+details summary {
+  user-select: none;
   outline: none;
 }
 
-label {
-  display: block;
+body {
+  padding-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.output-form {
+  outline: none;
+  user-select: none;
+  font-family: monospace;
+}
+
+#text_output {
+  user-select: text;
+}
+
+.revealpass {
+  margin-top: 2em;
 }
