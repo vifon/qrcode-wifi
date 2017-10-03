@@ -5,7 +5,6 @@ function generateQRCode() {
   const pass = (<HTMLInputElement>document.getElementById('pass')).value;
   const security =
     (<HTMLInputElement>document.querySelector('input[name="security"]:checked')).value;
-  console.log(security);
   const escape = (s: string) => s.replace(/([^0-9a-zA-Z])/g, "\\$1");
   const escapedSsid = escape(ssid);
   const escapedPass = escape(pass);
