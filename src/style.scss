@@ -1,5 +1,5 @@
-$roboto-font-path: "../node_modules/materialize-sass/fonts/roboto/";
-@import "../node_modules/materialize-sass/sass/materialize";
+$roboto-font-path: "~materialize-sass/fonts/roboto/";
+@import "~materialize-sass/sass/materialize";
 
 // https://stackoverflow.com/a/6202729/1561140
 details summary::-webkit-details-marker {
